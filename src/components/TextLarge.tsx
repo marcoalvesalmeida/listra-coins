@@ -7,6 +7,7 @@ interface Props {
   fontSize?: "text-sm" | "text-base" | "text-lg" | "text-2xl";
   regular?: boolean;
   light?: boolean;
+  customClassName?: string;
 }
 
 const TextLarge: React.FC<Props> = ({
@@ -14,13 +15,15 @@ const TextLarge: React.FC<Props> = ({
   fontSize = "text-2xl",
   regular = false,
   light = false,
+  customClassName = "",
 }) => {
   return (
     <Text
       className={clsx(
         fontSize,
         regular ? "font-Sora_Regular" : "font-Sora_SemiBold",
-        light ? "text-light" : "text-dark"
+        light ? "text-light" : "text-dark",
+        customClassName,
       )}
     >
       {children}

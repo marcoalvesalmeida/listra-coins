@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         <Header />
         <View className="bg-light-secondary flex-1 rounded-t-3xl z-10 mt-12">
           <BalanceCard />
-          <View className="w-full h-full mt-8 px-8">
+          <View className="w-full h-full mt-8 px-4">
             <FlashList
               data={DATA}
               renderItem={({ item, index }) => (
