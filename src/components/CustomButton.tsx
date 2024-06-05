@@ -20,7 +20,7 @@ const CustomButton: React.FC<Props> = ({
       onPress={onPress}
       className={clsx(
         "bg-primary rounded-full py-3 px-6 items-center justify-center",
-        customClassName
+        customClassName,
       )}
     >
       <Text className={clsx("font-Sora_SemiBold text-light", fontSize)}>

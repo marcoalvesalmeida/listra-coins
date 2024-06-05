@@ -20,13 +20,13 @@ const CustomTextInput: React.FC<Props> = ({
       className={clsx(
         "bg-light h-auto w-full py-3 px-6 flex-row justify-start items-center",
         "rounded-2xl z-10 shadow-[#000000] shadow-2xl",
-        customClassName
+        customClassName,
       )}
     >
       {icon}
       <TextInput
         className={clsx(
-          "w-full h-16 px-4 text-dark font-Sora_SemiBold text-lg"
+          "w-full h-16 px-4 text-dark font-Sora_SemiBold text-lg",
         )}
         placeholderTextColor={Theme.customColors.dark}
         cursorColor={Theme.customColors.dark}

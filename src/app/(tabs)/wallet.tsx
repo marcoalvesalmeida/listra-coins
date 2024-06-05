@@ -1,6 +1,6 @@
 import SafeAreaContent from "@/components/SafeAreaContent";
 import React from "react";
-import { View, Text } from "react-native";
+import { Text } from "react-native";
 
 const Home: React.FC = () => {
   return (

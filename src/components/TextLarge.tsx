@@ -3,7 +3,7 @@ import React from "react";
 import { Text } from "react-native";
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | string;
   fontSize?: "text-sm" | "text-base" | "text-lg" | "text-2xl";
   regular?: boolean;
   light?: boolean;

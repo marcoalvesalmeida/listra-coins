@@ -12,7 +12,7 @@ const TextAux: React.FC<Props> = ({ children, customClassName = "" }) => {
     <Text
       className={clsx(
         "text-light-gray text-xs font-Sora_Regular",
-        customClassName
+        customClassName,
       )}
     >
       {children}
