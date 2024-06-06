@@ -5,16 +5,16 @@
       "last_name": "Jackson",
       "email": "mary@listracoins.com",
       "password": "abcd1234",
-      "balance": 800,
+      "balance": 1000,
       "id": "fd6c",
-      "token": "{\"expiresIn\":\"2024-06-16T18:02:36.479Z\",\"email\":\"mary@listracoins.com\"}"
+      "token": "{\"expiresIn\":\"2024-06-16T19:40:34.319Z\",\"email\":\"mary@listracoins.com\"}"
     },
     {
       "first_name": "Margaret",
       "last_name": "Hamilton",
       "email": "margaret@listracoins.com",
       "password": "abcd1234",
-      "balance": 7002144,
+      "balance": 4000,
       "id": "d130"
     }
   ],
@@ -57,7 +57,7 @@
     {
       "name": "Teclado Mecânico Pro",
       "price": 400,
-      "stock": 77,
+      "stock": 76,
       "image": "https://source.unsplash.com/random?keyboard",
       "id": "4c1c"
     },
@@ -146,14 +146,5 @@
       "id": "3bb5"
     }
   ],
-  "transactions": [
-    {
-      "id": "c943",
-      "amount": 200,
-      "userId": "fd6c",
-      "productId": "078a",
-      "productName": "Fone de Ouvido SuperBass",
-      "createdAt": "06/06/2024 15:02:40"
-    }
-  ]
+  "transactions": []
 }
