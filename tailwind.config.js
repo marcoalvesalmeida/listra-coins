@@ -14,6 +14,7 @@ module.exports = {
       light: "#FFFFFF",
       "light-secondary": "#F9F9F9",
       "light-gray": "#9B9B9B",
+      error: "#ff1744",
     },
   },
   plugins: [],

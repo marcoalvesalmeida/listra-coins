@@ -7,6 +7,7 @@ interface Props {
   onPress: () => void;
   customClassName?: string;
   fontSize?: "text-sm" | "text-lg";
+  disabled?: boolean;
 }
 
 const CustomButton: React.FC<Props> = ({
@@ -14,6 +15,7 @@ const CustomButton: React.FC<Props> = ({
   onPress,
   customClassName = "",
   fontSize = "text-lg",
+  disabled = false,
 }) => {
   return (
     <TouchableOpacity
@@ -22,6 +24,7 @@ const CustomButton: React.FC<Props> = ({
         "bg-primary rounded-full py-3 px-6 items-center justify-center",
         customClassName,
       )}
+      disabled={disabled}
     >
       <Text className={clsx("font-Sora_SemiBold text-light", fontSize)}>
         {children}
