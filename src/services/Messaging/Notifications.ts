@@ -55,7 +55,7 @@ export async function requestPermissionsAsync() {
 export async function schedulePushNotification(
   title: string,
   body: string,
-  seconds: number = 10,
+  seconds: number = 60,
 ) {
   await Notifications.scheduleNotificationAsync({
     content: {
