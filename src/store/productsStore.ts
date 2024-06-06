@@ -6,6 +6,7 @@ export type StateProps = {
   products: ProductData[];
   setProducts: (products: ProductData[]) => void;
   add: (products: ProductData[]) => void;
+  update: (product: ProductData) => void;
   reset: () => void;
 };
 
@@ -23,9 +24,34 @@ export const productsStore = (set) => ({
       products: products,
     })),
   add: (products: ProductData[]) =>
-    set((state) => ({
-      products: [...state.products, ...products],
-    })),
+    set((state) => {
+      const uniqueProducts = products.filter((newProduct) => {
+        // Verificar se o ID do novo produto já existe no estado atual
+        return !state.products.some(
+          (existingProduct) => existingProduct.id === newProduct.id,
+        );
+      });
+
+      return {
+        products: [...state.products, ...uniqueProducts],
+      };
+    }),
+  update: (product: ProductData) =>
+    set((state) => {
+      const newState = state.products.map((item) => {
+        if (item.id === product.id) {
+          return {
+            ...item,
+            stock: product.stock,
+          };
+        }
+        return item;
+      });
+
+      return {
+        products: newState,
+      };
+    }),
   reset: () => {
     set({
       products: PRODUCTS_INITIAL_VALUE,

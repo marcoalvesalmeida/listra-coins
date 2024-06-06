@@ -14,7 +14,7 @@ const useAuth = () => {
 
   const hasSession = async () => {
     let userLocal;
-    if (user.id) {
+    if (user?.id) {
       userLocal = user;
     } else {
       userLocal = await loadUser();

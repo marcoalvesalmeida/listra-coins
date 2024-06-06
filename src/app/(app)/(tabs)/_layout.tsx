@@ -14,7 +14,7 @@ export default function Layout() {
   const [isLoading, setIsLoading] = useState(true);
   const [isAuth, setIsAuth] = useState(false);
   const { hasSession } = useAuth();
-  const { user } = useUserStore();
+  const token = useUserStore((p) => p.user.token);
 
   useEffect(() => {
     async function verifySession() {
@@ -30,7 +30,7 @@ export default function Layout() {
     }
 
     verifySession();
-  }, [user]);
+  }, [token]);
 
   if (isLoading) {
     return null;

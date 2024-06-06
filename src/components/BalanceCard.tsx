@@ -4,8 +4,12 @@ import { View } from "react-native";
 import WalletSVG from "@/assets/icons/wallet_focused.svg";
 import clsx from "clsx";
 import TextLarge from "./TextLarge";
+import useUserStore from "@/hooks/useUserStore";
+import { formatCurrencyToShow } from "@/utils/Currency";
 
 const BalanceCard: React.FC = () => {
+  const { user } = useUserStore();
+
   return (
     <View
       className={clsx(
@@ -17,7 +21,9 @@ const BalanceCard: React.FC = () => {
       <TextLarge regular fontSize="text-base">
         <>
           {"Lc "}
-          <TextLarge fontSize="text-lg">4.634.047</TextLarge>
+          <TextLarge fontSize="text-lg">
+            {user?.balance ? formatCurrencyToShow(user?.balance) : "0"}
+          </TextLarge>
         </>
       </TextLarge>
     </View>

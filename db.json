@@ -5,142 +5,238 @@
       "last_name": "Jackson",
       "email": "mary@listracoins.com",
       "password": "abcd1234",
-      "balance": 4634047.0
+      "balance": 4591047,
+      "id": "fd6c",
+      "token": "{\"expiresIn\":\"2024-06-16T12:48:08.367Z\",\"email\":\"mary@listracoins.com\"}"
     },
     {
       "first_name": "Margaret",
       "last_name": "Hamilton",
       "email": "margaret@listracoins.com",
       "password": "abcd1234",
-      "balance": 7002144.0
+      "balance": 7002144,
+      "id": "d130"
     }
   ],
   "products": [
     {
-      "id": 1,
       "name": "Notebook L24",
-      "price": 4000.0,
-      "stock": 40,
-      "image": "https://images.unsplash.com/photo-1491472253230-a044054ca35f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D"
+      "price": 4000,
+      "stock": 31,
+      "image": "https://images.unsplash.com/photo-1491472253230-a044054ca35f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D",
+      "id": "a50c"
     },
     {
-      "id": 2,
       "name": "Relógio DaHora",
-      "price": 800.0,
-      "stock": 20,
-      "image": "https://m.media-amazon.com/images/I/51BIlN1tmwL._AC_SY1000_.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Smartphone XPlus",
-      "price": 3000.0,
-      "stock": 50,
-      "image": "https://images.unsplash.com/photo-1512499617640-c2f9992cffe9?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D"
-    },
-    {
-      "id": 4,
-      "name": "Fone de Ouvido SuperBass",
-      "price": 200.0,
-      "stock": 150,
-      "image": "https://source.unsplash.com/random?headset"
-    },
-    {
-      "id": 5,
-      "name": "Monitor UltraWide",
-      "price": 1500.0,
-      "stock": 30,
-      "image": "https://source.unsplash.com/random?monitor"
-    },
-    {
-      "id": 6,
-      "name": "Teclado Mecânico Pro",
-      "price": 400.0,
-      "stock": 80,
-      "image": "https://source.unsplash.com/random?keyboard"
-    },
-    {
-      "id": 7,
-      "name": "Mouse Gamer RGB",
-      "price": 150.0,
-      "stock": 100,
-      "image": "https://source.unsplash.com/random?mouse"
-    },
-    {
-      "id": 8,
-      "name": "Impressora Multifuncional",
-      "price": 700.0,
-      "stock": 25,
-      "image": "https://source.unsplash.com/random?printer"
-    },
-    {
-      "id": 9,
-      "name": "Câmera Profissional X100",
-      "price": 5000.0,
-      "stock": 10,
-      "image": "https://source.unsplash.com/random?camera"
-    },
-    {
-      "id": 10,
-      "name": "Tablet MiniPro",
-      "price": 2500.0,
-      "stock": 60,
-      "image": "https://source.unsplash.com/random?tablet"
-    },
-    {
-      "id": 11,
-      "name": "Smartwatch Fit",
-      "price": 600.0,
-      "stock": 90,
-      "image": "https://source.unsplash.com/random?smartwatch"
-    },
-    {
-      "id": 12,
-      "name": "Cadeira Gamer Confort",
-      "price": 800.0,
-      "stock": 45,
-      "image": "https://source.unsplash.com/random?gamer"
-    },
-    {
-      "id": 13,
-      "name": "SSD 1TB Turbo",
-      "price": 900.0,
-      "stock": 70,
-      "image": "https://source.unsplash.com/random?ssd"
-    },
-    {
-      "id": 14,
-      "name": "Microfone Condensador",
-      "price": 500.0,
-      "stock": 55,
-      "image": "https://source.unsplash.com/random?microphone"
-    },
-    {
-      "id": 15,
-      "name": "Drone AirView",
-      "price": 3500.0,
+      "price": 800,
       "stock": 15,
-      "image": "https://source.unsplash.com/random?drone"
+      "image": "https://m.media-amazon.com/images/I/51BIlN1tmwL._AC_SY1000_.jpg",
+      "id": "ee56"
     },
     {
-      "id": 16,
+      "name": "Smartphone XPlus",
+      "price": 3000,
+      "stock": 49,
+      "image": "https://images.unsplash.com/photo-1512499617640-c2f9992cffe9?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D",
+      "id": "ef87"
+    },
+    {
+      "name": "Fone de Ouvido SuperBass",
+      "price": 200,
+      "stock": 150,
+      "image": "https://source.unsplash.com/random?headset",
+      "id": "078a"
+    },
+    {
+      "name": "Monitor UltraWide",
+      "price": 1500,
+      "stock": 30,
+      "image": "https://source.unsplash.com/random?monitor",
+      "id": "8653"
+    },
+    {
+      "name": "Teclado Mecânico Pro",
+      "price": 400,
+      "stock": 80,
+      "image": "https://source.unsplash.com/random?keyboard",
+      "id": "4c1c"
+    },
+    {
+      "name": "Mouse Gamer RGB",
+      "price": 150,
+      "stock": 100,
+      "image": "https://source.unsplash.com/random?mouse",
+      "id": "d2af"
+    },
+    {
+      "name": "Impressora Multifuncional",
+      "price": 700,
+      "stock": 25,
+      "image": "https://source.unsplash.com/random?printer",
+      "id": "f528"
+    },
+    {
+      "name": "Câmera Profissional X100",
+      "price": 5000,
+      "stock": 10,
+      "image": "https://source.unsplash.com/random?camera",
+      "id": "f736"
+    },
+    {
+      "name": "Tablet MiniPro",
+      "price": 2500,
+      "stock": 60,
+      "image": "https://source.unsplash.com/random?tablet",
+      "id": "9d98"
+    },
+    {
+      "name": "Smartwatch Fit",
+      "price": 600,
+      "stock": 90,
+      "image": "https://source.unsplash.com/random?smartwatch",
+      "id": "67a7"
+    },
+    {
+      "name": "Cadeira Gamer Confort",
+      "price": 800,
+      "stock": 45,
+      "image": "https://source.unsplash.com/random?gamer",
+      "id": "4bcb"
+    },
+    {
+      "name": "SSD 1TB Turbo",
+      "price": 900,
+      "stock": 70,
+      "image": "https://source.unsplash.com/random?ssd",
+      "id": "45d9"
+    },
+    {
+      "name": "Microfone Condensador",
+      "price": 500,
+      "stock": 55,
+      "image": "https://source.unsplash.com/random?microphone",
+      "id": "c93d"
+    },
+    {
+      "name": "Drone AirView",
+      "price": 3500,
+      "stock": 15,
+      "image": "https://source.unsplash.com/random?drone",
+      "id": "58d0"
+    },
+    {
       "name": "Caixa de Som Bluetooth",
-      "price": 300.0,
+      "price": 300,
       "stock": 120,
-      "image": "https://source.unsplash.com/random?soundbar"
+      "image": "https://source.unsplash.com/random?soundbar",
+      "id": "9c5e"
     },
     {
-      "id": 17,
       "name": "Kindle Reader",
-      "price": 600.0,
+      "price": 600,
       "stock": 75,
-      "image": "https://source.unsplash.com/random?kindle"
+      "image": "https://source.unsplash.com/random?kindle",
+      "id": "52b2"
     },
     {
-      "id": 18,
       "name": "TV 4K Ultra HD",
-      "price": 3200.0,
+      "price": 3200,
       "stock": 20,
-      "image": "https://source.unsplash.com/random?tv"
+      "image": "https://source.unsplash.com/random?tv",
+      "id": "3bb5"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "cb16",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "46b5",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "e100",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "e40d",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "086b",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "f4fd",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "dc3e",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "b1bc",
+      "amount": 800,
+      "userId": "fd6c",
+      "productId": "ee56",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "38b8",
+      "amount": 800,
+      "userId": "fd6c",
+      "productId": "ee56",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "ad75",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "d460",
+      "amount": 800,
+      "userId": "fd6c",
+      "productId": "ee56",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "4cc7",
+      "amount": 4000,
+      "userId": "fd6c",
+      "productId": "a50c",
+      "createdAt": "Thu Jun 06 2024"
+    },
+    {
+      "id": "bab9",
+      "amount": 3000,
+      "userId": "fd6c",
+      "productId": "ef87",
+      "createdAt": "Thu Jun 06 2024"
     }
   ]
 }

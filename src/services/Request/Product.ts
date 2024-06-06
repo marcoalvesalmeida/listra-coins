@@ -48,3 +48,52 @@ export async function list(
     };
   }
 }
+
+export async function getStock(
+  id: string,
+): Promise<GenericResponse<ProductData>> {
+  try {
+    const { status, data } = await api.get(`/products/${id}`);
+
+    if (status === 200 && data) {
+      return {
+        success: data.stock >= 1,
+        data: data,
+      };
+    } else {
+      return {
+        success: false,
+        error: ERROR_MESSAGE,
+      };
+    }
+  } catch {
+    return {
+      success: false,
+      error: ERROR_MESSAGE,
+    };
+  }
+}
+
+export async function update(
+  product: ProductData,
+): Promise<GenericResponse<ProductData>> {
+  try {
+    const { status } = await api.put(`/products/${product.id}`, product);
+
+    if (status === 200) {
+      return {
+        success: true,
+      };
+    } else {
+      return {
+        success: false,
+        error: ERROR_MESSAGE,
+      };
+    }
+  } catch {
+    return {
+      success: false,
+      error: ERROR_MESSAGE,
+    };
+  }
+}

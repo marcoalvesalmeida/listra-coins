@@ -7,7 +7,10 @@ export interface UserData {
   first_name: string;
   last_name: string;
   email: string;
+  balance: number;
 }
+
+const ERROR_MESSAGE = "Tivemos um problema, tente novamente.";
 
 export async function auth(
   email: string,
@@ -36,7 +39,57 @@ export async function auth(
   } catch {
     return {
       success: false,
-      error: "Tivemos um problema, tente novamente.",
+      error: ERROR_MESSAGE,
+    };
+  }
+}
+
+export async function getBalance(
+  id: string,
+  price: number,
+): Promise<GenericResponse<UserData>> {
+  try {
+    const { status, data } = await api.get(`/users/${id}`);
+
+    if (status === 200 && data) {
+      return {
+        success: data.balance >= price,
+        data: data,
+      };
+    } else {
+      return {
+        success: false,
+        error: ERROR_MESSAGE,
+      };
+    }
+  } catch {
+    return {
+      success: false,
+      error: ERROR_MESSAGE,
+    };
+  }
+}
+
+export async function update(
+  user: UserData,
+): Promise<GenericResponse<UserData>> {
+  try {
+    const { status } = await api.put(`/users/${user.id}`, user);
+
+    if (status === 200) {
+      return {
+        success: true,
+      };
+    } else {
+      return {
+        success: false,
+        error: ERROR_MESSAGE,
+      };
+    }
+  } catch {
+    return {
+      success: false,
+      error: ERROR_MESSAGE,
     };
   }
 }
