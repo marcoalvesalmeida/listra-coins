@@ -11,6 +11,7 @@ import { formatCurrencyToShow } from "@/utils/Currency";
 import useCheckout from "@/hooks/useCheckout";
 import Toast from "react-native-toast-message";
 import useTransactionsStore from "@/hooks/useTransactionsStore";
+import useUserStore from "@/hooks/useUserStore";
 
 interface Props {
   index: number;
@@ -25,6 +26,7 @@ const ProductCard: React.FC<Props> = ({ index, numColumns, item }) => {
   const [disabled, setDisabled] = useState(false);
   const [buttonType, setButtonType] = useState(IconButtonType.Idle);
   const { buy } = useCheckout();
+  const balance = useUserStore((state) => state.user.balance);
   const { transactions } = useTransactionsStore();
 
   useEffect(() => {
@@ -37,6 +39,12 @@ const ProductCard: React.FC<Props> = ({ index, numColumns, item }) => {
       setButtonType(IconButtonType.Success);
     }
   }, [item.id, transactions]);
+
+  useEffect(() => {
+    if ((item.price * 100) / balance > 80) {
+      setDisabled(true);
+    }
+  }, [balance, item.price]);
 
   async function handleByProduct(product: ProductData) {
     setButtonType(IconButtonType.Loading);

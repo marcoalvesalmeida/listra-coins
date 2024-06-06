@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React from "react";
-import { ActivityIndicator, TouchableOpacity } from "react-native";
+import { ActivityIndicator, TouchableOpacity, View } from "react-native";
 
 import SuccessSVG from "@/assets/icons/check_circle.svg";
 import IdleSVG from "@/assets/icons/shopping_cart.svg";
@@ -47,7 +47,15 @@ const IconButton: React.FC<Props> = ({
       )}
       disabled={disabled}
     >
-      {renderIcon()}
+      <View
+        className={clsx(
+          type === IconButtonType.Idle && disabled
+            ? "opacity-50"
+            : "opacity-100",
+        )}
+      >
+        {renderIcon()}
+      </View>
     </TouchableOpacity>
   );
 };

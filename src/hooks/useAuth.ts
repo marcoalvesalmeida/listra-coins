@@ -1,6 +1,7 @@
 import useUserStore from "@/hooks/useUserStore";
 import {
   loadUser,
+  removeTransactions,
   removeUser,
   saveTransactions,
   saveUser,
@@ -65,6 +66,7 @@ const useAuth = () => {
   const logout = () => {
     reset();
     removeUser();
+    removeTransactions();
     router.replace("login");
   };
 
