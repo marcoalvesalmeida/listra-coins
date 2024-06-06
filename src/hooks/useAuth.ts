@@ -11,6 +11,7 @@ import { auth } from "@/services/Request/User";
 import { createToken, validateToken } from "@/services/Security/Token";
 import { router } from "expo-router";
 import useTransactionsStore from "./useTransactionsStore";
+import { requestPermissionsAsync } from "@/services/Messaging/Notifications";
 
 interface Data {
   success: boolean;
@@ -53,6 +54,8 @@ const useAuth = () => {
         setTransactions(transactionsData);
         saveTransactions(transactionsData);
       }
+
+      requestPermissionsAsync();
       return {
         success,
       };

@@ -5,9 +5,9 @@
       "last_name": "Jackson",
       "email": "mary@listracoins.com",
       "password": "abcd1234",
-      "balance": 4578847,
+      "balance": 800,
       "id": "fd6c",
-      "token": "{\"expiresIn\":\"2024-06-16T15:30:49.166Z\",\"email\":\"mary@listracoins.com\"}"
+      "token": "{\"expiresIn\":\"2024-06-16T18:02:36.479Z\",\"email\":\"mary@listracoins.com\"}"
     },
     {
       "first_name": "Margaret",
@@ -43,7 +43,7 @@
     {
       "name": "Fone de Ouvido SuperBass",
       "price": 200,
-      "stock": 149,
+      "stock": 146,
       "image": "https://source.unsplash.com/random?headset",
       "id": "078a"
     },
@@ -57,14 +57,14 @@
     {
       "name": "Teclado Mecânico Pro",
       "price": 400,
-      "stock": 80,
+      "stock": 77,
       "image": "https://source.unsplash.com/random?keyboard",
       "id": "4c1c"
     },
     {
       "name": "Mouse Gamer RGB",
       "price": 150,
-      "stock": 100,
+      "stock": 98,
       "image": "https://source.unsplash.com/random?mouse",
       "id": "d2af"
     },
@@ -98,7 +98,7 @@
     },
     {
       "name": "Cadeira Gamer Confort",
-      "price": 800,
+      "price": 850,
       "stock": 45,
       "image": "https://source.unsplash.com/random?gamer",
       "id": "4bcb"
@@ -113,7 +113,7 @@
     {
       "name": "Microfone Condensador",
       "price": 500,
-      "stock": 55,
+      "stock": 54,
       "image": "https://source.unsplash.com/random?microphone",
       "id": "c93d"
     },
@@ -148,35 +148,12 @@
   ],
   "transactions": [
     {
-      "id": "6a6a",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "5fdc",
-      "amount": 800,
-      "userId": "fd6c",
-      "productId": "ee56",
-      "productName": "Relógio DaHora",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "3bd4",
+      "id": "c943",
       "amount": 200,
       "userId": "fd6c",
       "productId": "078a",
       "productName": "Fone de Ouvido SuperBass",
-      "createdAt": "06/06/2024 13:02:29"
-    },
-    {
-      "id": "a1be",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "productName": "Notebook L24",
-      "createdAt": "06/06/2024 13:02:47"
+      "createdAt": "06/06/2024 15:02:40"
     }
   ]
 }

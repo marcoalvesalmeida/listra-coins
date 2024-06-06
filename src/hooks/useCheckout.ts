@@ -8,6 +8,7 @@ import {
 import useUserStore from "./useUserStore";
 import { saveUser } from "@/services/Persistence/Storage";
 import useTransactions from "./useTransactions";
+import { schedulePushNotification } from "@/services/Messaging/Notifications";
 
 interface Data {
   success: boolean;
@@ -67,6 +68,11 @@ const useCheckout = () => {
           message: rollbackProductError,
         };
       }
+
+      schedulePushNotification(
+        `O ${newProductData.name} está à caminho! 🥳`,
+        "🎁 Parabéns, sua compra foi confirmada!",
+      );
 
       setUser(newUserData);
       await saveUser(newUserData);
