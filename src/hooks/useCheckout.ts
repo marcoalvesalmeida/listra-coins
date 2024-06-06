@@ -7,7 +7,7 @@ import {
 } from "@/services/Request/Product";
 import useUserStore from "./useUserStore";
 import { saveUser } from "@/services/Persistence/Storage";
-import { create as createTransaction } from "@/services/Request/Transactions";
+import useTransactions from "./useTransactions";
 
 interface Data {
   success: boolean;
@@ -17,6 +17,7 @@ interface Data {
 const useCheckout = () => {
   const { update: updateProductStore } = useProductsStore();
   const { user, setUser } = useUserStore();
+  const { newTransaction } = useTransactions();
 
   const buy = async (product: ProductData): Promise<Data> => {
     const { success: stockSuccess, data: stockData } = await getStock(
@@ -71,7 +72,14 @@ const useCheckout = () => {
       await saveUser(newUserData);
       updateProductStore(newProductData);
 
-      await createTransaction(product.price, user.id, product.id);
+      await newTransaction({
+        productId: product.id,
+        productName: product.name,
+        amount: product.price,
+        userId: user.id,
+        createdAt: "",
+        id: "",
+      });
 
       return {
         success: true,

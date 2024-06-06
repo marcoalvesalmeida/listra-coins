@@ -1,5 +1,5 @@
 import { api } from "../api";
-import { GenericResponse } from "./types";
+import { GenericResponse, PaginateResponseData } from "./types";
 
 export interface ProductData {
   id: string;
@@ -9,22 +9,12 @@ export interface ProductData {
   image: string;
 }
 
-export interface ResponseData {
-  first: number;
-  prev: number | null;
-  next: number;
-  last: number;
-  pages: number;
-  items: number;
-  data: ProductData[];
-}
-
 const ERROR_MESSAGE = "Tivemos um problema, tente novamente.";
 
 export async function list(
   page: number,
   perPage: number,
-): Promise<GenericResponse<ResponseData>> {
+): Promise<GenericResponse<PaginateResponseData<ProductData[]>>> {
   try {
     const { status, data } = await api.get(
       `/products?_page=${page}&_per_page=${perPage}`,

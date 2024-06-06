@@ -5,9 +5,9 @@
       "last_name": "Jackson",
       "email": "mary@listracoins.com",
       "password": "abcd1234",
-      "balance": 4591047,
+      "balance": 4578847,
       "id": "fd6c",
-      "token": "{\"expiresIn\":\"2024-06-16T12:48:08.367Z\",\"email\":\"mary@listracoins.com\"}"
+      "token": "{\"expiresIn\":\"2024-06-16T15:30:49.166Z\",\"email\":\"mary@listracoins.com\"}"
     },
     {
       "first_name": "Margaret",
@@ -22,14 +22,14 @@
     {
       "name": "Notebook L24",
       "price": 4000,
-      "stock": 31,
+      "stock": 29,
       "image": "https://images.unsplash.com/photo-1491472253230-a044054ca35f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D",
       "id": "a50c"
     },
     {
       "name": "Relógio DaHora",
       "price": 800,
-      "stock": 15,
+      "stock": 14,
       "image": "https://m.media-amazon.com/images/I/51BIlN1tmwL._AC_SY1000_.jpg",
       "id": "ee56"
     },
@@ -43,7 +43,7 @@
     {
       "name": "Fone de Ouvido SuperBass",
       "price": 200,
-      "stock": 150,
+      "stock": 149,
       "image": "https://source.unsplash.com/random?headset",
       "id": "078a"
     },
@@ -141,102 +141,42 @@
     {
       "name": "TV 4K Ultra HD",
       "price": 3200,
-      "stock": 20,
+      "stock": 19,
       "image": "https://source.unsplash.com/random?tv",
       "id": "3bb5"
     }
   ],
   "transactions": [
     {
-      "id": "cb16",
+      "id": "6a6a",
       "amount": 4000,
       "userId": "fd6c",
       "productId": "a50c",
       "createdAt": "Thu Jun 06 2024"
     },
     {
-      "id": "46b5",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "e100",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "e40d",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "086b",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "f4fd",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "dc3e",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "b1bc",
+      "id": "5fdc",
       "amount": 800,
       "userId": "fd6c",
       "productId": "ee56",
+      "productName": "Relógio DaHora",
       "createdAt": "Thu Jun 06 2024"
     },
     {
-      "id": "38b8",
-      "amount": 800,
+      "id": "3bd4",
+      "amount": 200,
       "userId": "fd6c",
-      "productId": "ee56",
-      "createdAt": "Thu Jun 06 2024"
+      "productId": "078a",
+      "productName": "Fone de Ouvido SuperBass",
+      "createdAt": "06/06/2024 13:02:29"
     },
     {
-      "id": "ad75",
+      "id": "a1be",
       "amount": 4000,
       "userId": "fd6c",
       "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "d460",
-      "amount": 800,
-      "userId": "fd6c",
-      "productId": "ee56",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "4cc7",
-      "amount": 4000,
-      "userId": "fd6c",
-      "productId": "a50c",
-      "createdAt": "Thu Jun 06 2024"
-    },
-    {
-      "id": "bab9",
-      "amount": 3000,
-      "userId": "fd6c",
-      "productId": "ef87",
-      "createdAt": "Thu Jun 06 2024"
+      "productName": "Notebook L24",
+      "createdAt": "06/06/2024 13:02:47"
     }
   ]
 }

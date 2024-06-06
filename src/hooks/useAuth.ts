@@ -1,8 +1,15 @@
 import useUserStore from "@/hooks/useUserStore";
-import { loadUser, removeUser, saveUser } from "@/services/Persistence/Storage";
+import {
+  loadUser,
+  removeUser,
+  saveTransactions,
+  saveUser,
+} from "@/services/Persistence/Storage";
+import { list as listTransactions } from "@/services/Request/Transactions";
 import { auth } from "@/services/Request/User";
 import { createToken, validateToken } from "@/services/Security/Token";
 import { router } from "expo-router";
+import useTransactionsStore from "./useTransactionsStore";
 
 interface Data {
   success: boolean;
@@ -11,6 +18,7 @@ interface Data {
 
 const useAuth = () => {
   const { user, setUser, reset } = useUserStore();
+  const { setTransactions } = useTransactionsStore();
 
   const hasSession = async () => {
     let userLocal;
@@ -37,6 +45,13 @@ const useAuth = () => {
       };
       setUser(userData);
       saveUser(userData);
+      const { success: transactionsSuccess, data: transactionsData } =
+        await listTransactions(userData.id);
+
+      if (transactionsSuccess && transactionsData) {
+        setTransactions(transactionsData);
+        saveTransactions(transactionsData);
+      }
       return {
         success,
       };

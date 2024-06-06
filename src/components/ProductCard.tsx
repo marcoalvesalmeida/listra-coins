@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import { Image } from "expo-image";
 
@@ -10,6 +10,7 @@ import { ProductData } from "@/services/Request/Product";
 import { formatCurrencyToShow } from "@/utils/Currency";
 import useCheckout from "@/hooks/useCheckout";
 import Toast from "react-native-toast-message";
+import useTransactionsStore from "@/hooks/useTransactionsStore";
 
 interface Props {
   index: number;
@@ -21,11 +22,23 @@ const blurhash =
   "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
 const ProductCard: React.FC<Props> = ({ index, numColumns, item }) => {
+  const [disabled, setDisabled] = useState(false);
   const [buttonType, setButtonType] = useState(IconButtonType.Idle);
-  const [loading, setLoading] = useState(false);
   const { buy } = useCheckout();
+  const { transactions } = useTransactionsStore();
+
+  useEffect(() => {
+    if (
+      transactions?.filter(
+        (transactionItem) => transactionItem.productId === item.id,
+      ).length > 0
+    ) {
+      setDisabled(true);
+      setButtonType(IconButtonType.Success);
+    }
+  }, [item.id, transactions]);
+
   async function handleByProduct(product: ProductData) {
-    setLoading(true);
     setButtonType(IconButtonType.Loading);
     const { success, message } = await buy(product);
     if (success) {
@@ -38,7 +51,6 @@ const ProductCard: React.FC<Props> = ({ index, numColumns, item }) => {
       });
       setButtonType(IconButtonType.Idle);
     }
-    setLoading(false);
   }
 
   return (
@@ -62,14 +74,22 @@ const ProductCard: React.FC<Props> = ({ index, numColumns, item }) => {
         </TextAux>
         <View className="mt-1 flex-row justify-between items-end">
           <View>
-            <TextLarge regular fontSize="text-base">
+            <TextLarge
+              regular
+              fontSize="text-sm"
+              customClassName="text-primary"
+            >
               Lc
             </TextLarge>
             <TextLarge fontSize="text-base" customClassName="text-primary">
               {formatCurrencyToShow(item.price)}
             </TextLarge>
           </View>
-          <IconButton type={buttonType} onPress={() => handleByProduct(item)} />
+          <IconButton
+            type={buttonType}
+            onPress={() => handleByProduct(item)}
+            disabled={disabled}
+          />
         </View>
       </View>
     </View>

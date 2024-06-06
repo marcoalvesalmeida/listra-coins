@@ -10,7 +10,7 @@ export type StateProps = {
   reset: () => void;
 };
 
-export const PRODUCTS_INITIAL_VALUE = [];
+export const PRODUCTS_INITIAL_VALUE: ProductData[] = [];
 
 export const productsStore = (set) => ({
   size: 0,
@@ -26,7 +26,6 @@ export const productsStore = (set) => ({
   add: (products: ProductData[]) =>
     set((state) => {
       const uniqueProducts = products.filter((newProduct) => {
-        // Verificar se o ID do novo produto já existe no estado atual
         return !state.products.some(
           (existingProduct) => existingProduct.id === newProduct.id,
         );

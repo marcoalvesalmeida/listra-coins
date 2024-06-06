@@ -9,12 +9,15 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import useAuth from "@/hooks/useAuth";
 import { useEffect, useState } from "react";
 import useUserStore from "@/hooks/useUserStore";
+import { loadTransactions } from "@/services/Persistence/Storage";
+import useTransactionsStore from "@/hooks/useTransactionsStore";
 
 export default function Layout() {
   const [isLoading, setIsLoading] = useState(true);
   const [isAuth, setIsAuth] = useState(false);
   const { hasSession } = useAuth();
-  const token = useUserStore((p) => p.user.token);
+  const { setTransactions } = useTransactionsStore();
+  const token = useUserStore((state) => state?.user?.token);
 
   useEffect(() => {
     async function verifySession() {
@@ -31,6 +34,15 @@ export default function Layout() {
 
     verifySession();
   }, [token]);
+
+  useEffect(() => {
+    async function getTransactions() {
+      const data = await loadTransactions();
+      setTransactions(data || []);
+    }
+
+    getTransactions();
+  }, []);
 
   if (isLoading) {
     return null;

@@ -6,12 +6,13 @@ export type StateProps = {
   reset: () => void;
 };
 
-export const USER_INITIAL_VALUES = {
+export const USER_INITIAL_VALUES: UserData = {
   id: "",
   token: "",
   first_name: "",
   last_name: "",
   email: "",
+  balance: 0,
 };
 
 export const userStore = (set) => ({

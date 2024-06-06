@@ -16,12 +16,14 @@ interface Props {
   type?: IconButtonType;
   onPress: () => void;
   customClassName?: string;
+  disabled?: boolean;
 }
 
 const IconButton: React.FC<Props> = ({
   type = IconButtonType.Idle,
   onPress,
   customClassName = "",
+  disabled = false,
 }) => {
   const renderIcon = () => {
     switch (type) {
@@ -43,6 +45,7 @@ const IconButton: React.FC<Props> = ({
         "bg-primary w-8 h-8 rounded-xl items-center justify-center",
         customClassName,
       )}
+      disabled={disabled}
     >
       {renderIcon()}
     </TouchableOpacity>
