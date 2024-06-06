@@ -166,7 +166,7 @@ OU
 "password": "abcd1234",
 ```
 
-11. A partir de então você estará pronto para visualizar o app. Para rodar em um simulador iOS clique na tecla **i** dentro do terminal. Para rodar em um emulador Android clique na tecla **a**. Para testar em um dispositivo real utilize o Aplicativo Expo GO e escaneie o QRCode que aparece na tela.
+9. A partir de então você estará pronto para visualizar o app. Para rodar em um simulador iOS clique na tecla **i** dentro do terminal. Para rodar em um emulador Android clique na tecla **a**. Para testar em um dispositivo real utilize o Aplicativo Expo GO e escaneie o QRCode que aparece na tela.
 
 ## Rodando os testes
 
